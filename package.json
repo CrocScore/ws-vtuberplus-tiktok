@@ -1,0 +1,24 @@
+{
+  "name": "ws-vtuberplus-tiktok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrocScore/ws-vtuberplus-tiktok.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrocScore/ws-vtuberplus-tiktok/issues"
+  },
+  "homepage": "https://github.com/CrocScore/ws-vtuberplus-tiktok#readme",
+  "dependencies": {
+    "tiktok-live-connector": "^1.0.3",
+    "ws": "^8.13.0"
+  }
+}
