@@ -11,7 +11,8 @@ npm install ws
 ```
 
 Code to modify:
-\nchange
+
+change
 ```js
 // Username of someone who is currently live (change this to your username)
 let tiktokUsername = "crocscorelive";
