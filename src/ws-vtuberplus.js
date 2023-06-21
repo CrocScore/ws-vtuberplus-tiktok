@@ -97,7 +97,7 @@ tiktokLiveConnection.on("like", (data) => {
   );
   // TODO: send the data to the WebSocket server
   let Count = data.likeCount;
-  let ItemIndex = 1; // default value based on your example
+  let ItemIndex = 8; // default value based on your example (this points to a custom item)
   let CustomItemIndex = -1; // default value
   let Damage = 0; // default value
 
@@ -117,6 +117,17 @@ tiktokLiveConnection.on("share", (data) => {
   console.log(data.uniqueId, "shared the stream!");
   addShareTime();
 });
+
+// For when the user gifts a "big" gift or when gift streaks
+tiktokLiveConnection.on('gift', data => {
+  if (data.giftType === 1 && !data.repeatEnd) {
+    // Streak in progress => show only temporary
+    console.log(`${data.uniqueId} is sending gift ${data.giftName} x${data.repeatCount}`);
+  } else {
+    // Streak ended or non-streakable gift => process the gift with final repeat_count
+    console.log(`${data.uniqueId} has sent gift ${data.giftName} x${data.repeatCount}`);
+  }
+})
 
 tiktokLiveConnection.on("websocketConnected", (websocketClient) => {
   // console.log("Websocket:", websocketClient.connection);
