@@ -95,11 +95,10 @@ tiktokLiveConnection.on("like", (data) => {
   console.log(
     `${data.uniqueId} sent ${data.likeCount} likes, total likes: ${data.totalLikeCount}`
   );
-  // TODO: send the data to the WebSocket server
   let Count = data.likeCount;
-  let ItemIndex = 8; // default value based on your example (this points to a custom item)
-  let CustomItemIndex = -1; // default value
-  let Damage = 0; // default value
+  let ItemIndex = 7; 
+  let CustomItemIndex = -1; 
+  let Damage = 0; 
 
   let message = `VTP_Throw:${Count}:${ItemIndex}:${CustomItemIndex}:${Damage}`;
 
