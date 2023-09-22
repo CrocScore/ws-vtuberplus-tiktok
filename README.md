@@ -1,4 +1,8 @@
 # ws-vtuberplus-tiktok
+Read more about how to better customize your code: https://github.com/zerodytrash/TikTok-Live-Connector
+
+WARNING: Using your own IP has a pretty high chance of getting you IP banned for a bit, to circumnavigate, I recommend using proxies (read https://github.com/zerodytrash/TikTok-Live-Connector) or using a vpn while running/testing
+
 How to use:
 
 You will need to install node.js in order to use this. Once node.js is installed, use terminal commands and type
@@ -24,7 +28,7 @@ Tiktok live connector keeps track of how many likes a user gives. I like to thro
 Using the https://vtuberplus.com/#websockets documentation with VTuber plus, you need 4 different arguments.
 ```js
   let Count = data.likeCount;
-  let ItemIndex = 1;
+  let ItemIndex = 7; // Change this to the item ID (7 is random)
   let CustomItemIndex = -1;
   let Damage = 0;
 ```
